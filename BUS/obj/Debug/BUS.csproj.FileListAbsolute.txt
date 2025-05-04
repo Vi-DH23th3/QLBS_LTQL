@@ -1,0 +1,22 @@
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\bin\Debug\BUS.dll
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\bin\Debug\BUS.pdb
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\bin\Debug\DAO.dll
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\bin\Debug\DTO.dll
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\bin\Debug\DAO.pdb
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\bin\Debug\DTO.pdb
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\obj\Debug\BUS.dll
+D:\24-25\LTQL1\DEMO\qlBanSach\BUS\obj\Debug\BUS.pdb
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\bin\Debug\BUS.dll
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\bin\Debug\BUS.pdb
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\bin\Debug\DAO.dll
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\bin\Debug\DTO.dll
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\bin\Debug\DAO.pdb
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\bin\Debug\DTO.pdb
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\obj\Debug\BUS.dll
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\BUS\obj\Debug\BUS.pdb

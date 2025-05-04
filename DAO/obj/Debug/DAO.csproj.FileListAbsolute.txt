@@ -1,0 +1,18 @@
+D:\24-25\LTQL1\DEMO\qlBanSach\DAO\bin\Debug\DAO.dll
+D:\24-25\LTQL1\DEMO\qlBanSach\DAO\bin\Debug\DAO.pdb
+D:\24-25\LTQL1\DEMO\qlBanSach\DAO\bin\Debug\DTO.dll
+D:\24-25\LTQL1\DEMO\qlBanSach\DAO\bin\Debug\DTO.pdb
+D:\24-25\LTQL1\DEMO\qlBanSach\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\24-25\LTQL1\DEMO\qlBanSach\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\24-25\LTQL1\DEMO\qlBanSach\DAO\obj\Debug\DAO.csproj.Up2Date
+D:\24-25\LTQL1\DEMO\qlBanSach\DAO\obj\Debug\DAO.dll
+D:\24-25\LTQL1\DEMO\qlBanSach\DAO\obj\Debug\DAO.pdb
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DAO\bin\Debug\DAO.dll
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DAO\bin\Debug\DAO.pdb
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DAO\bin\Debug\DTO.dll
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DAO\bin\Debug\DTO.pdb
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DAO\obj\Debug\DAO.csproj.Up2Date
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DAO\obj\Debug\DAO.dll
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DAO\obj\Debug\DAO.pdb

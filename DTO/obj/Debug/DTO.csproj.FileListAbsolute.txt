@@ -1,0 +1,12 @@
+D:\24-25\LTQL1\DEMO\qlBanSach\DTO\bin\Debug\DTO.dll
+D:\24-25\LTQL1\DEMO\qlBanSach\DTO\bin\Debug\DTO.pdb
+D:\24-25\LTQL1\DEMO\qlBanSach\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\24-25\LTQL1\DEMO\qlBanSach\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\24-25\LTQL1\DEMO\qlBanSach\DTO\obj\Debug\DTO.dll
+D:\24-25\LTQL1\DEMO\qlBanSach\DTO\obj\Debug\DTO.pdb
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DTO\bin\Debug\DTO.dll
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DTO\bin\Debug\DTO.pdb
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DTO\obj\Debug\DTO.dll
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\DTO\obj\Debug\DTO.pdb
