@@ -33,19 +33,43 @@ namespace DAO
             DataProvider.DongKetNoi(conn);
             return lstTacGia;
         }
-        
+
+        //public bool ThemTacGia(TacGia_DTO tacgia)
+        //{
+        //    string sQuery = string.Format(@" insert into tacgia value(N'{0}', N'{1}')",tacgia.SMaTG, tacgia.STenTacGia);
+        //    conn = DataProvider.MoKetNoi();
+
+        //    bool kq= DataProvider.TruyVanKhongLayDuLieu(sQuery,conn);
+        //    DataProvider.DongKetNoi(conn);
+        //    return kq;
+        //}
         public bool ThemTacGia(TacGia_DTO tacgia)
         {
-            string sQuery = string.Format(@" insert into tacgia value(N'{0}', N'{1}')",tacgia.SMaTG, tacgia.STenTacGia);
-            conn = DataProvider.MoKetNoi();
+            try
+            {
+                string query = "INSERT INTO tacgia (tentacgia) VALUES (@tentacgia)";
+                conn = DataProvider.MoKetNoi();
 
-            bool kq= DataProvider.TruyVanKhongLayDuLieu(sQuery,conn);
-            DataProvider.DongKetNoi(conn);
-            return kq;
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@tentacgia", tacgia.STenTacGia.Trim());
+
+                int rows = cmd.ExecuteNonQuery(); // Trả về số dòng thêm được
+                return rows > 0;
+            }
+            catch (Exception ex)
+            {
+                // Ném lỗi để GUI hiển thị
+                throw new Exception("DAO - ThemTacGia: " + ex.Message);
+            }
+            finally
+            {
+                DataProvider.DongKetNoi(conn);
+            }
         }
+
         public string TimMaTheoTenTG(string tentg)
         {
-            string sql = "SELECT matacgia FROM tacgia WHERE tentacgia  = @tentg";
+            string sql = "SELECT matacgia FROM tacgia WHERE tentacgia = @tentg";
 
             conn = DataProvider.MoKetNoi();
 
@@ -61,8 +85,8 @@ namespace DAO
 
             if (dt.Rows.Count == 0)
                 return null;
-
-            return dt.Rows[0]["matacgia"].ToString();
+            string matg = dt.Rows[0]["matacgia"].ToString();
+            return matg;
         }
     }
 }

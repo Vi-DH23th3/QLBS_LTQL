@@ -28,6 +28,13 @@ namespace DAO
             da.Fill(dt);
             return dt;
         }
+        public static DataTable TruyVanLayDLCoCmd(SqlCommand cmd)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         public static bool TruyVanKhongLayDuLieu(string s, SqlConnection ketnoi)
         {
             try
@@ -41,5 +48,6 @@ namespace DAO
                 return false;
             }
         }
+        
     }
 }

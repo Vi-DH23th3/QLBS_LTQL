@@ -42,10 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Books_DAO.cs" />
+    <Compile Include="ChiTietBanSach_DAO.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="KhachHang_DAO.cs" />
     <Compile Include="NguoiDung_DAO.cs" />
+    <Compile Include="NhanVien_DAO.cs" />
     <Compile Include="NXB_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QlBanHang_DAO.cs" />
     <Compile Include="TacGia_DAO.cs" />
     <Compile Include="TheLoai_DAO.cs" />
   </ItemGroup>

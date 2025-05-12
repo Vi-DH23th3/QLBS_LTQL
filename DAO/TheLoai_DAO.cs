@@ -49,20 +49,31 @@ namespace DAO
                 return null;
             }
             DataProvider.DongKetNoi(conn);
-            return dt.Rows[0]["matheloai"].ToString();
+            string matl = dt.Rows[0]["matheloai"].ToString();
+            return matl ;
         }
         public bool ThemTheLoai(TheLoai_DTO theloai)
         {
-            string sql = @"insert into theloai(matheloai, tentheloai) values(@matheloai, @tentheloai)";
-            conn=DataProvider.MoKetNoi();
-            SqlCommand cmd= new SqlCommand(sql, conn);
+            try
+            {
+                string sql = @"insert into theloai( tentheloai) values( @tentheloai)";
+                conn = DataProvider.MoKetNoi();
+                SqlCommand cmd = new SqlCommand(sql, conn);
 
-            cmd.Parameters.AddWithValue("@matheloai", theloai.SMaTheLoai);
-            cmd.Parameters.AddWithValue("@tentheloai", theloai.STenTheLoai.Trim());
+                cmd.Parameters.AddWithValue("@tentheloai", theloai.STenTheLoai.Trim());
 
-            cmd.ExecuteNonQuery();
-            DataProvider.DongKetNoi(conn);
-            return true;
+                cmd.ExecuteNonQuery();
+                
+                return true;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("DAO - ThemTheLoai: " + ex.Message);
+            }
+            finally
+            {
+                DataProvider.DongKetNoi(conn);
+            }
         }
     }
 }

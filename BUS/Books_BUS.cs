@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,41 +32,44 @@ namespace BUS
         {
             return Books_DAO.TimTheoTenSach(nxb);
         }
-        public static List<Books_DTO>TimTheoMaSach(string ms)
+        public static Books_DTO TimTheoMaSach(string ms)
         {
             return Books_DAO.TimTheoMaSach(ms);
+        }
+        public int LaySoLuong(string masach)
+        {
+            return books_DAO.LaySoLuong(masach);
         }
         public bool KiemTravaThemSach(Books_DTO sach)
         {
             try
             {
-                if (!books_DAO.KiemTraMaSach(sach.SMaSach))
+                string masach = books_DAO.KiemTraSach(sach.STenSach);
+                if (string.IsNullOrEmpty(masach))
                 {
                     // Tìm mã tác giả theo tên
                     string matg = TacGia_DAO.TimMaTheoTenTG(sach.STenTacGia);
 
-                    // Nếu mã tác giả chưa tồn tại (tức là tên tác giả chưa có trong CSDL)
+                    // Nếu mã tác giả chưa tồn tại 
                     if (string.IsNullOrEmpty(matg))
                     {
-                        tg_dto.SMaTG = sach.SMaTG; // Lấy từ txtMaTGMoi.Text: mã tác giả mới
-                        tg_dto.STenTacGia = sach.STenTacGia;
-
+                        tg_dto.STenTacGia=sach.STenTacGia;
                         if (!TacGia_DAO.ThemTacGia(tg_dto))
                         {
                             return false; // Không thêm được tác giả mới
                         }
-                        matg = sach.SMaTG; // Gán lại mã vừa thêm thành công: Vì nếu thêm thành công thì lấy mã mới thêm vào bảng books
+                        matg = TacGia_DAO.TimMaTheoTenTG(sach.STenTacGia); 
                     }
                     string matl = theLoai_DAO.TimMaTheoTenTheLoai(sach.STheLoai);
                     if (string.IsNullOrEmpty(matl))
                     {
-                        theLoai_DTO.SMaTheLoai = sach.SMaTheLoai;
+                       
                         theLoai_DTO.STenTheLoai = sach.STheLoai;
                         if (!theLoai_DAO.ThemTheLoai(theLoai_DTO))
                         {
                             return false;
                         }
-                        matl = sach.SMaTheLoai;
+                        matl = theLoai_DAO.TimMaTheoTenTheLoai(sach.STheLoai);
                     }
                     sach.SMaTheLoai = matl;
                     sach.SMaTG = matg; //nếu mã đã tồn tại thì lấy mã đã tìm được từ tên tác giả: thêm vào bảng books
@@ -73,17 +77,73 @@ namespace BUS
                 }
                 else
                 {
+                    sach.SMaSach = masach;
 
                     books_DAO.ThemSoLuong(sach.SMaSach, sach.SSachTK);
                     return true;
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return false;
-            }
-           
-            
+                throw new Exception("BUS: " + ex.Message);
+            } 
         }
+        public bool SuaSach(Books_DTO sach)
+        {
+            try
+            {
+                string matg = TacGia_DAO.TimMaTheoTenTG(sach.STenTacGia);
+                string matl = theLoai_DAO.TimMaTheoTenTheLoai(sach.STheLoai);
+                sach.SMaTG = matg;
+                sach.SMaTheLoai= matl;
+                if (books_DAO.SuaSach(sach))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("BUS - Sửa sách: " + ex.Message);
+            }
+        }
+        public bool XoaSach(Books_DTO sach, out string thongBao) 
+        {
+            try
+            {
+                int soluong=books_DAO.LaySoLuong(sach.SMaSach);
+                if (soluong > 0)
+                {
+                    thongBao = "Sách vẫn còn tồn kho. Không thể xóa!";
+                    return false;
+                }
+                else 
+                {
+                    if (books_DAO.XoaSach(sach))
+                    {
+                        thongBao = "Xóa sách thành công.";
+                        return true;
+                    }
+                    else
+                    {
+                        thongBao = "Xóa sách thất bại.";
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("BUS - Xóa sách: " + ex.Message);
+                
+            }           
+        }
+        public static bool CapNhatTonKho(int ms, int soluong)
+        {
+            return Books_DAO.CapNhatTonKho(ms,soluong);
+        }
+
     }
 }

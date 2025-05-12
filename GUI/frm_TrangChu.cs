@@ -20,23 +20,22 @@ namespace GUI
             InitializeComponent();
         }
         public bool bDangNhap;
-        public NguoiDung_DTO NguoiDung;
+        public static NguoiDung_DTO NguoiDung;
         frm_DangNhap fDN;
 
         private void HienThiMenu()
         {
-            toolStripMenuItemSach.Enabled = false;
-            toolStripMenuItemNhapSach.Enabled = false;
-            toolStripMenuItemBanSach.Enabled = false;
-            toolStripMenuItemThongKe.Enabled = false;
-            đăngXuấtToolStripMenuItem.Enabled=false;
-            btnBanSach.Enabled=false;
-            btnSach.Enabled=false;
-            btnNhapSach.Enabled = false;
-            btnKhachHang.Enabled = false;
-            btnNhanVien.Enabled = false;
-            btnThongKe.Enabled = false;
-            btnDangXuat.Enabled = false;
+            toolStripMenuItemSach.Visible = false;
+            toolStripMenuItemQLBS.Visible = false;
+            toolStripMenuItemHoaDon.Visible = false;
+            toolStripMenuItemThongKe.Visible = false;
+            đăngXuấtToolStripMenuItem.Visible = false;
+            btnBanSach.Visible = false;
+            btnSach.Visible = false;
+            btnHoaDon.Visible = false;
+            btnKhachHang.Visible = false;
+            btnNhanVien.Visible = false;
+            btnDangXuat.Visible = false;
             // Hiển thị thông tin đăng nhập lên thanh trạng thái
             if (bDangNhap == true)
             {
@@ -55,29 +54,29 @@ namespace GUI
                 switch (iQuyen)
                 {
                     case 1:
-                        toolStripMenuItemSach.Enabled = true;
-                        toolStripMenuItemNhapSach.Enabled = true;
-                        toolStripMenuItemBanSach.Enabled = true;
-                        toolStripMenuItemThongKe.Enabled= true;
-                        đăngXuấtToolStripMenuItem.Enabled = true;
-                        btnBanSach.Enabled = true;
-                        btnSach.Enabled = true;
-                        btnNhapSach.Enabled = true;
-                        btnKhachHang.Enabled = true;
-                        btnNhanVien.Enabled = true;
-                        btnThongKe.Enabled = true;
-                        btnDangXuat.Enabled= true;
+                        toolStripMenuItemSach.Visible = true;
+                        toolStripMenuItemQLBS.Visible = true;
+                        toolStripMenuItemHoaDon.Visible = true;
+                        toolStripMenuItemThongKe.Visible = true;
+                        đăngXuấtToolStripMenuItem.Visible = true;
+                        btnBanSach.Visible = true;
+                        btnSach.Visible = true;
+                        btnHoaDon.Visible = true;
+                        btnKhachHang.Visible = true;
+                        btnNhanVien.Visible = true;
+                        btnDangXuat.Visible = true;
 
                         break;
                     case 2:
-                        toolStripMenuItemSach.Enabled = true;
-                        toolStripMenuItemNhapSach.Enabled = true;
-                        toolStripMenuItemBanSach.Enabled = true;
-                        đăngXuấtToolStripMenuItem.Enabled = true;
-                        btnBanSach.Enabled = true;
-                        btnSach.Enabled = true;
-                        btnNhapSach.Enabled = true;
-                        btnDangXuat.Enabled = true;
+                        toolStripMenuItemSach.Visible = true;
+                        toolStripMenuItemQLBS.Visible = true;
+                        toolStripMenuItemHoaDon.Visible = true;
+                        đăngXuấtToolStripMenuItem.Visible = true;
+                        btnBanSach.Visible = true;
+                        btnSach.Visible = true;
+                        btnHoaDon.Visible = true;
+                        btnKhachHang.Visible = true;
+                        btnDangXuat.Visible = true;
                         break;
                     default:
                         break;
@@ -151,10 +150,29 @@ namespace GUI
         }
         public void MoFormSach()
         {
-            frm_dmBooks frm_DmBooks = new frm_dmBooks();
+            frm_dmBooks frm_DmBooks = new frm_dmBooks(NguoiDung);
             frm_DmBooks.ShowDialog();
         }
-
+        public void MoFormQLBanSach()
+        {
+            frm_QLBanSach frm_QLBanSach = new frm_QLBanSach(NguoiDung);
+            frm_QLBanSach.ShowDialog(); 
+        }
+        public void MoFormHD()
+        {
+            frm_HoaDon frm_HoaDon = new frm_HoaDon();
+            frm_HoaDon.ShowDialog();
+        }
+        public void MoFormKhachHang()
+        {
+            frm_KhachHang frm_kh = new frm_KhachHang(NguoiDung);
+            frm_kh.ShowDialog();
+        }
+        public void MoFormNhanVien()
+        {
+            frm_NhanVien frm_nv = new frm_NhanVien();
+            frm_nv.ShowDialog();
+        }
         private void toolStripMenuItemSach_Click(object sender, EventArgs e)
         {
             MoFormSach();
@@ -163,6 +181,42 @@ namespace GUI
         private void btnSach_Click(object sender, EventArgs e)
         {
             MoFormSach();
+        }
+
+        private void btnBanSach_Click(object sender, EventArgs e)
+        {
+            MoFormQLBanSach();
+        }
+
+        private void toolStripMenuItemQLBS_Click(object sender, EventArgs e)
+        {
+            MoFormQLBanSach();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            MoFormHD();
+        }
+
+        private void toolStripMenuItemHoaDon_Click(object sender, EventArgs e)
+        {
+            MoFormHD();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            MoFormKhachHang();
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            MoFormNhanVien();
+        }
+
+        private void toolStripMenuItemTKTheoNgay_Click(object sender, EventArgs e)
+        {
+            frm_BCDoanhThuTheoNgay frm_bc = new frm_BCDoanhThuTheoNgay();
+            frm_bc.ShowDialog();
         }
     }
 }

@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,17 +64,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmDoiMK.cs">
+    <Compile Include="frm_BCDoanhThuTheoNgay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDoiMK.Designer.cs">
-      <DependentUpon>frmDoiMK.cs</DependentUpon>
+    <Compile Include="frm_BCDoanhThuTheoNgay.Designer.cs">
+      <DependentUpon>frm_BCDoanhThuTheoNgay.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_BanSach.cs">
+    <Compile Include="frm_HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_BanSach.Designer.cs">
-      <DependentUpon>frm_BanSach.cs</DependentUpon>
+    <Compile Include="frm_HoaDon.Designer.cs">
+      <DependentUpon>frm_HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QLBanSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QLBanSach.Designer.cs">
+      <DependentUpon>frm_QLBanSach.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_DangNhap.cs">
       <SubType>Form</SubType>
@@ -82,12 +106,6 @@
     <Compile Include="frm_NhanVien.Designer.cs">
       <DependentUpon>frm_NhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_NhapSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_NhapSach.Designer.cs">
-      <DependentUpon>frm_NhapSach.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,14 +124,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>qlBanSachDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmDoiMK.resx">
-      <DependentUpon>frmDoiMK.cs</DependentUpon>
+    <Compile Include="frm_SuaDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaDonHang.Designer.cs">
+      <DependentUpon>frm_SuaDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanlybansachDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanlybansachDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanlybansachDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanlybansachDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frm_BCDoanhThuTheoNgay.resx">
+      <DependentUpon>frm_BCDoanhThuTheoNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HoaDon.resx">
+      <DependentUpon>frm_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_KhachHang.resx">
+      <DependentUpon>frm_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QLBanSach.resx">
+      <DependentUpon>frm_QLBanSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_dmBooks.resx">
       <DependentUpon>frm_dmBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhanVien.resx">
+      <DependentUpon>frm_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaDonHang.resx">
+      <DependentUpon>frm_SuaDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TrangChu.resx">
       <DependentUpon>frm_TrangChu.cs</DependentUpon>
@@ -123,6 +173,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportDTNgay.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.QlBanHang_DTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,6 +196,28 @@
     <None Include="qlBanSachDataSet.xss">
       <DependentUpon>qlBanSachDataSet.xsd</DependentUpon>
     </None>
+    <None Include="QuanlybansachDataSet.xsc">
+      <DependentUpon>QuanlybansachDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanlybansachDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanlybansachDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanlybansachDataSet.xss">
+      <DependentUpon>QuanlybansachDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanlybansachDataSet1.xsc">
+      <DependentUpon>QuanlybansachDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanlybansachDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanlybansachDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanlybansachDataSet1.xss">
+      <DependentUpon>QuanlybansachDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -159,6 +234,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,6 +23,8 @@ namespace DTO
         private string sMaNXB;
         private string sMaTheLoai;
 
+        private int iDaXoa;
+
         public string SMaSach { get => sMaSach; set => sMaSach = value; }
         public string STenSach { get => sTenSach; set => sTenSach = value; }
         
@@ -36,5 +38,6 @@ namespace DTO
         public string SMaTheLoai { get => sMaTheLoai; set => sMaTheLoai = value; }
        
         public decimal DGiaTien { get => dGiaTien; set => dGiaTien = value; }
+        public int IDaXoa { get => iDaXoa; set => iDaXoa = value; }
     }
 }
