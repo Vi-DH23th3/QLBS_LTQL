@@ -23,10 +23,7 @@ namespace GUI
         {
             try
             {
-                var data = QlBanHang_BUS.ThongKeTheoNgay();
-                qlBanHangDTOBindingSource.DataSource = data;
-                MessageBox.Show("Số dòng: " + data.Count);
-               // qlBanHangDTOBindingSource.DataSource = QlBanHang_BUS.ThongKeTheoNgay();
+                qlBanHangDTOBindingSource.DataSource = QlBanHang_BUS.ThongKeTheoNgay();
             }
             catch (Exception ex)
             {

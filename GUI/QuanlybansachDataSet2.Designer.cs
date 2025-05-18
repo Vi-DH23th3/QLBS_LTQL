@@ -20,17 +20,17 @@ namespace GUI {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("QuanlybansachDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("QuanlybansachDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class QuanlybansachDataSet : global::System.Data.DataSet {
+    public partial class QuanlybansachDataSet2 : global::System.Data.DataSet {
         
-        private qlbanhangDataTable tableqlbanhang;
+        private chitiet_bansachDataTable tablechitiet_bansach;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public QuanlybansachDataSet() {
+        public QuanlybansachDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GUI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected QuanlybansachDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected QuanlybansachDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace GUI {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["qlbanhang"] != null)) {
-                    base.Tables.Add(new qlbanhangDataTable(ds.Tables["qlbanhang"]));
+                if ((ds.Tables["chitiet_bansach"] != null)) {
+                    base.Tables.Add(new chitiet_bansachDataTable(ds.Tables["chitiet_bansach"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace GUI {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public qlbanhangDataTable qlbanhang {
+        public chitiet_bansachDataTable chitiet_bansach {
             get {
-                return this.tableqlbanhang;
+                return this.tablechitiet_bansach;
             }
         }
         
@@ -127,7 +127,7 @@ namespace GUI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            QuanlybansachDataSet cln = ((QuanlybansachDataSet)(base.Clone()));
+            QuanlybansachDataSet2 cln = ((QuanlybansachDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace GUI {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["qlbanhang"] != null)) {
-                    base.Tables.Add(new qlbanhangDataTable(ds.Tables["qlbanhang"]));
+                if ((ds.Tables["chitiet_bansach"] != null)) {
+                    base.Tables.Add(new chitiet_bansachDataTable(ds.Tables["chitiet_bansach"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace GUI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableqlbanhang = ((qlbanhangDataTable)(base.Tables["qlbanhang"]));
+            this.tablechitiet_bansach = ((chitiet_bansachDataTable)(base.Tables["chitiet_bansach"]));
             if ((initTable == true)) {
-                if ((this.tableqlbanhang != null)) {
-                    this.tableqlbanhang.InitVars();
+                if ((this.tablechitiet_bansach != null)) {
+                    this.tablechitiet_bansach.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace GUI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "QuanlybansachDataSet";
+            this.DataSetName = "QuanlybansachDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/QuanlybansachDataSet.xsd";
+            this.Namespace = "http://tempuri.org/QuanlybansachDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableqlbanhang = new qlbanhangDataTable();
-            base.Tables.Add(this.tableqlbanhang);
+            this.tablechitiet_bansach = new chitiet_bansachDataTable();
+            base.Tables.Add(this.tablechitiet_bansach);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeqlbanhang() {
+        private bool ShouldSerializechitiet_bansach() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace GUI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            QuanlybansachDataSet ds = new QuanlybansachDataSet();
+            QuanlybansachDataSet2 ds = new QuanlybansachDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,27 @@ namespace GUI {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void qlbanhangRowChangeEventHandler(object sender, qlbanhangRowChangeEvent e);
+        public delegate void chitiet_bansachRowChangeEventHandler(object sender, chitiet_bansachRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class qlbanhangDataTable : global::System.Data.TypedTableBase<qlbanhangRow> {
+        public partial class chitiet_bansachDataTable : global::System.Data.TypedTableBase<chitiet_bansachRow> {
             
-            private global::System.Data.DataColumn columnngayban;
+            private global::System.Data.DataColumn columnmadonhang;
             
-            private global::System.Data.DataColumn columntongtien;
+            private global::System.Data.DataColumn columnmasach;
+            
+            private global::System.Data.DataColumn columngiaban;
+            
+            private global::System.Data.DataColumn columnsoluong;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public qlbanhangDataTable() {
-                this.TableName = "qlbanhang";
+            public chitiet_bansachDataTable() {
+                this.TableName = "chitiet_bansach";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +298,7 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal qlbanhangDataTable(global::System.Data.DataTable table) {
+            internal chitiet_bansachDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +315,40 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected qlbanhangDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected chitiet_bansachDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ngaybanColumn {
+            public global::System.Data.DataColumn madonhangColumn {
                 get {
-                    return this.columnngayban;
+                    return this.columnmadonhang;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn tongtienColumn {
+            public global::System.Data.DataColumn masachColumn {
                 get {
-                    return this.columntongtien;
+                    return this.columnmasach;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn giabanColumn {
+                get {
+                    return this.columngiaban;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn soluongColumn {
+                get {
+                    return this.columnsoluong;
                 }
             }
             
@@ -343,46 +363,56 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public qlbanhangRow this[int index] {
+            public chitiet_bansachRow this[int index] {
                 get {
-                    return ((qlbanhangRow)(this.Rows[index]));
+                    return ((chitiet_bansachRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event qlbanhangRowChangeEventHandler qlbanhangRowChanging;
+            public event chitiet_bansachRowChangeEventHandler chitiet_bansachRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event qlbanhangRowChangeEventHandler qlbanhangRowChanged;
+            public event chitiet_bansachRowChangeEventHandler chitiet_bansachRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event qlbanhangRowChangeEventHandler qlbanhangRowDeleting;
+            public event chitiet_bansachRowChangeEventHandler chitiet_bansachRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event qlbanhangRowChangeEventHandler qlbanhangRowDeleted;
+            public event chitiet_bansachRowChangeEventHandler chitiet_bansachRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddqlbanhangRow(qlbanhangRow row) {
+            public void Addchitiet_bansachRow(chitiet_bansachRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public qlbanhangRow AddqlbanhangRow(System.DateTime ngayban, decimal tongtien) {
-                qlbanhangRow rowqlbanhangRow = ((qlbanhangRow)(this.NewRow()));
+            public chitiet_bansachRow Addchitiet_bansachRow(int madonhang, int masach, decimal giaban, int soluong) {
+                chitiet_bansachRow rowchitiet_bansachRow = ((chitiet_bansachRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ngayban,
-                        tongtien};
-                rowqlbanhangRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowqlbanhangRow);
-                return rowqlbanhangRow;
+                        madonhang,
+                        masach,
+                        giaban,
+                        soluong};
+                rowchitiet_bansachRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowchitiet_bansachRow);
+                return rowchitiet_bansachRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public chitiet_bansachRow FindBymadonhangmasach(int madonhang, int masach) {
+                return ((chitiet_bansachRow)(this.Rows.Find(new object[] {
+                            madonhang,
+                            masach})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                qlbanhangDataTable cln = ((qlbanhangDataTable)(base.Clone()));
+                chitiet_bansachDataTable cln = ((chitiet_bansachDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -390,50 +420,62 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new qlbanhangDataTable();
+                return new chitiet_bansachDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnngayban = base.Columns["ngayban"];
-                this.columntongtien = base.Columns["tongtien"];
+                this.columnmadonhang = base.Columns["madonhang"];
+                this.columnmasach = base.Columns["masach"];
+                this.columngiaban = base.Columns["giaban"];
+                this.columnsoluong = base.Columns["soluong"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnngayban = new global::System.Data.DataColumn("ngayban", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnngayban);
-                this.columntongtien = new global::System.Data.DataColumn("tongtien", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntongtien);
-                this.columnngayban.AllowDBNull = false;
+                this.columnmadonhang = new global::System.Data.DataColumn("madonhang", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmadonhang);
+                this.columnmasach = new global::System.Data.DataColumn("masach", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmasach);
+                this.columngiaban = new global::System.Data.DataColumn("giaban", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngiaban);
+                this.columnsoluong = new global::System.Data.DataColumn("soluong", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsoluong);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnmadonhang,
+                                this.columnmasach}, true));
+                this.columnmadonhang.AllowDBNull = false;
+                this.columnmasach.AllowDBNull = false;
+                this.columngiaban.AllowDBNull = false;
+                this.columnsoluong.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public qlbanhangRow NewqlbanhangRow() {
-                return ((qlbanhangRow)(this.NewRow()));
+            public chitiet_bansachRow Newchitiet_bansachRow() {
+                return ((chitiet_bansachRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new qlbanhangRow(builder);
+                return new chitiet_bansachRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(qlbanhangRow);
+                return typeof(chitiet_bansachRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.qlbanhangRowChanged != null)) {
-                    this.qlbanhangRowChanged(this, new qlbanhangRowChangeEvent(((qlbanhangRow)(e.Row)), e.Action));
+                if ((this.chitiet_bansachRowChanged != null)) {
+                    this.chitiet_bansachRowChanged(this, new chitiet_bansachRowChangeEvent(((chitiet_bansachRow)(e.Row)), e.Action));
                 }
             }
             
@@ -441,8 +483,8 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.qlbanhangRowChanging != null)) {
-                    this.qlbanhangRowChanging(this, new qlbanhangRowChangeEvent(((qlbanhangRow)(e.Row)), e.Action));
+                if ((this.chitiet_bansachRowChanging != null)) {
+                    this.chitiet_bansachRowChanging(this, new chitiet_bansachRowChangeEvent(((chitiet_bansachRow)(e.Row)), e.Action));
                 }
             }
             
@@ -450,8 +492,8 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.qlbanhangRowDeleted != null)) {
-                    this.qlbanhangRowDeleted(this, new qlbanhangRowChangeEvent(((qlbanhangRow)(e.Row)), e.Action));
+                if ((this.chitiet_bansachRowDeleted != null)) {
+                    this.chitiet_bansachRowDeleted(this, new chitiet_bansachRowChangeEvent(((chitiet_bansachRow)(e.Row)), e.Action));
                 }
             }
             
@@ -459,14 +501,14 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.qlbanhangRowDeleting != null)) {
-                    this.qlbanhangRowDeleting(this, new qlbanhangRowChangeEvent(((qlbanhangRow)(e.Row)), e.Action));
+                if ((this.chitiet_bansachRowDeleting != null)) {
+                    this.chitiet_bansachRowDeleting(this, new chitiet_bansachRowChangeEvent(((chitiet_bansachRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveqlbanhangRow(qlbanhangRow row) {
+            public void Removechitiet_bansachRow(chitiet_bansachRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -475,7 +517,7 @@ namespace GUI {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                QuanlybansachDataSet ds = new QuanlybansachDataSet();
+                QuanlybansachDataSet2 ds = new QuanlybansachDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -493,7 +535,7 @@ namespace GUI {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "qlbanhangDataTable";
+                attribute2.FixedValue = "chitiet_bansachDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -537,54 +579,59 @@ namespace GUI {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class qlbanhangRow : global::System.Data.DataRow {
+        public partial class chitiet_bansachRow : global::System.Data.DataRow {
             
-            private qlbanhangDataTable tableqlbanhang;
+            private chitiet_bansachDataTable tablechitiet_bansach;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal qlbanhangRow(global::System.Data.DataRowBuilder rb) : 
+            internal chitiet_bansachRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableqlbanhang = ((qlbanhangDataTable)(this.Table));
+                this.tablechitiet_bansach = ((chitiet_bansachDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime ngayban {
+            public int madonhang {
                 get {
-                    return ((global::System.DateTime)(this[this.tableqlbanhang.ngaybanColumn]));
+                    return ((int)(this[this.tablechitiet_bansach.madonhangColumn]));
                 }
                 set {
-                    this[this.tableqlbanhang.ngaybanColumn] = value;
+                    this[this.tablechitiet_bansach.madonhangColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal tongtien {
+            public int masach {
                 get {
-                    try {
-                        return ((decimal)(this[this.tableqlbanhang.tongtienColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tongtien\' in table \'qlbanhang\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tablechitiet_bansach.masachColumn]));
                 }
                 set {
-                    this[this.tableqlbanhang.tongtienColumn] = value;
+                    this[this.tablechitiet_bansach.masachColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IstongtienNull() {
-                return this.IsNull(this.tableqlbanhang.tongtienColumn);
+            public decimal giaban {
+                get {
+                    return ((decimal)(this[this.tablechitiet_bansach.giabanColumn]));
+                }
+                set {
+                    this[this.tablechitiet_bansach.giabanColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SettongtienNull() {
-                this[this.tableqlbanhang.tongtienColumn] = global::System.Convert.DBNull;
+            public int soluong {
+                get {
+                    return ((int)(this[this.tablechitiet_bansach.soluongColumn]));
+                }
+                set {
+                    this[this.tablechitiet_bansach.soluongColumn] = value;
+                }
             }
         }
         
@@ -592,22 +639,22 @@ namespace GUI {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class qlbanhangRowChangeEvent : global::System.EventArgs {
+        public class chitiet_bansachRowChangeEvent : global::System.EventArgs {
             
-            private qlbanhangRow eventRow;
+            private chitiet_bansachRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public qlbanhangRowChangeEvent(qlbanhangRow row, global::System.Data.DataRowAction action) {
+            public chitiet_bansachRowChangeEvent(chitiet_bansachRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public qlbanhangRow Row {
+            public chitiet_bansachRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -623,7 +670,7 @@ namespace GUI {
         }
     }
 }
-namespace GUI.QuanlybansachDataSetTableAdapters {
+namespace GUI.QuanlybansachDataSet2TableAdapters {
     
     
     /// <summary>
@@ -635,7 +682,7 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class qlbanhangTableAdapter : global::System.ComponentModel.Component {
+    public partial class chitiet_bansachTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -649,7 +696,7 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public qlbanhangTableAdapter() {
+        public chitiet_bansachTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -746,17 +793,46 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "qlbanhang";
-            tableMapping.ColumnMappings.Add("ngayban", "ngayban");
-            tableMapping.ColumnMappings.Add("tongtien", "tongtien");
+            tableMapping.DataSetTable = "chitiet_bansach";
+            tableMapping.ColumnMappings.Add("madonhang", "madonhang");
+            tableMapping.ColumnMappings.Add("masach", "masach");
+            tableMapping.ColumnMappings.Add("giaban", "giaban");
+            tableMapping.ColumnMappings.Add("soluong", "soluong");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[chitiet_bansach] WHERE (([madonhang] = @Original_madonhang) AN" +
+                "D ([masach] = @Original_masach) AND ([giaban] = @Original_giaban) AND ([soluong]" +
+                " = @Original_soluong))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_madonhang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "madonhang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_masach", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "masach", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_giaban", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "giaban", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_soluong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "soluong", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[qlbanhang] ([ngayban], [tongtien]) VALUES (@ngayban, @tongtien" +
-                ")";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[chitiet_bansach] ([madonhang], [masach], [giaban], [soluong]) " +
+                "VALUES (@madonhang, @masach, @giaban, @soluong);\r\nSELECT madonhang, masach, giab" +
+                "an, soluong FROM chitiet_bansach WHERE (madonhang = @madonhang) AND (masach = @m" +
+                "asach)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ngayban", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ngayban", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tongtien", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "tongtien", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@madonhang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "madonhang", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@masach", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "masach", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@giaban", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "giaban", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@soluong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "soluong", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[chitiet_bansach] SET [madonhang] = @madonhang, [masach] = @masach, [giaban] = @giaban, [soluong] = @soluong WHERE (([madonhang] = @Original_madonhang) AND ([masach] = @Original_masach) AND ([giaban] = @Original_giaban) AND ([soluong] = @Original_soluong));
+SELECT madonhang, masach, giaban, soluong FROM chitiet_bansach WHERE (madonhang = @madonhang) AND (masach = @masach)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@madonhang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "madonhang", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@masach", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "masach", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@giaban", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "giaban", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@soluong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "soluong", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_madonhang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "madonhang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_masach", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "masach", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_giaban", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "giaban", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_soluong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "soluong", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -772,7 +848,7 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ngayban, tongtien FROM dbo.qlbanhang";
+            this._commandCollection[0].CommandText = "SELECT madonhang, masach, giaban, soluong FROM dbo.chitiet_bansach";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -780,7 +856,7 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuanlybansachDataSet.qlbanhangDataTable dataTable) {
+        public virtual int Fill(QuanlybansachDataSet2.chitiet_bansachDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -793,9 +869,9 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuanlybansachDataSet.qlbanhangDataTable GetData() {
+        public virtual QuanlybansachDataSet2.chitiet_bansachDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuanlybansachDataSet.qlbanhangDataTable dataTable = new QuanlybansachDataSet.qlbanhangDataTable();
+            QuanlybansachDataSet2.chitiet_bansachDataTable dataTable = new QuanlybansachDataSet2.chitiet_bansachDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -803,15 +879,15 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuanlybansachDataSet.qlbanhangDataTable dataTable) {
+        public virtual int Update(QuanlybansachDataSet2.chitiet_bansachDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuanlybansachDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "qlbanhang");
+        public virtual int Update(QuanlybansachDataSet2 dataSet) {
+            return this.Adapter.Update(dataSet, "chitiet_bansach");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -832,15 +908,37 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_madonhang, int Original_masach, decimal Original_giaban, int Original_soluong) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_madonhang));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_masach));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_giaban));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_soluong));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime ngayban, global::System.Nullable<decimal> tongtien) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(ngayban));
-            if ((tongtien.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(tongtien.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
+        public virtual int Insert(int madonhang, int masach, decimal giaban, int soluong) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(madonhang));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(masach));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(giaban));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(soluong));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -856,6 +954,43 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int madonhang, int masach, decimal giaban, int soluong, int Original_madonhang, int Original_masach, decimal Original_giaban, int Original_soluong) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(madonhang));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(masach));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(giaban));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(soluong));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_madonhang));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_masach));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_giaban));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_soluong));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(decimal giaban, int soluong, int Original_madonhang, int Original_masach, decimal Original_giaban, int Original_soluong) {
+            return this.Update(Original_madonhang, Original_masach, giaban, soluong, Original_madonhang, Original_masach, Original_giaban, Original_soluong);
+        }
     }
     
     /// <summary>
@@ -870,7 +1005,7 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private qlbanhangTableAdapter _qlbanhangTableAdapter;
+        private chitiet_bansachTableAdapter _chitiet_bansachTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -892,12 +1027,12 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public qlbanhangTableAdapter qlbanhangTableAdapter {
+        public chitiet_bansachTableAdapter chitiet_bansachTableAdapter {
             get {
-                return this._qlbanhangTableAdapter;
+                return this._chitiet_bansachTableAdapter;
             }
             set {
-                this._qlbanhangTableAdapter = value;
+                this._chitiet_bansachTableAdapter = value;
             }
         }
         
@@ -920,9 +1055,9 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._qlbanhangTableAdapter != null) 
-                            && (this._qlbanhangTableAdapter.Connection != null))) {
-                    return this._qlbanhangTableAdapter.Connection;
+                if (((this._chitiet_bansachTableAdapter != null) 
+                            && (this._chitiet_bansachTableAdapter.Connection != null))) {
+                    return this._chitiet_bansachTableAdapter.Connection;
                 }
                 return null;
             }
@@ -937,7 +1072,7 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._qlbanhangTableAdapter != null)) {
+                if ((this._chitiet_bansachTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -949,14 +1084,14 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(QuanlybansachDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(QuanlybansachDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._qlbanhangTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.qlbanhang.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._chitiet_bansachTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.chitiet_bansach.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._qlbanhangTableAdapter.Update(updatedRows));
+                    result = (result + this._chitiet_bansachTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -968,13 +1103,13 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(QuanlybansachDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(QuanlybansachDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._qlbanhangTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.qlbanhang.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._chitiet_bansachTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.chitiet_bansach.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._qlbanhangTableAdapter.Update(addedRows));
+                    result = (result + this._chitiet_bansachTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -986,13 +1121,13 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(QuanlybansachDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(QuanlybansachDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._qlbanhangTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.qlbanhang.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._chitiet_bansachTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.chitiet_bansach.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._qlbanhangTableAdapter.Update(deletedRows));
+                    result = (result + this._chitiet_bansachTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1028,15 +1163,15 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(QuanlybansachDataSet dataSet) {
+        public virtual int UpdateAll(QuanlybansachDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._qlbanhangTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._qlbanhangTableAdapter.Connection) == false))) {
+            if (((this._chitiet_bansachTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._chitiet_bansachTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1072,13 +1207,13 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._qlbanhangTableAdapter != null)) {
-                    revertConnections.Add(this._qlbanhangTableAdapter, this._qlbanhangTableAdapter.Connection);
-                    this._qlbanhangTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._qlbanhangTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._qlbanhangTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._qlbanhangTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._qlbanhangTableAdapter.Adapter);
+                if ((this._chitiet_bansachTableAdapter != null)) {
+                    revertConnections.Add(this._chitiet_bansachTableAdapter, this._chitiet_bansachTableAdapter.Connection);
+                    this._chitiet_bansachTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._chitiet_bansachTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._chitiet_bansachTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._chitiet_bansachTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._chitiet_bansachTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1139,9 +1274,9 @@ namespace GUI.QuanlybansachDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._qlbanhangTableAdapter != null)) {
-                    this._qlbanhangTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._qlbanhangTableAdapter]));
-                    this._qlbanhangTableAdapter.Transaction = null;
+                if ((this._chitiet_bansachTableAdapter != null)) {
+                    this._chitiet_bansachTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._chitiet_bansachTableAdapter]));
+                    this._chitiet_bansachTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

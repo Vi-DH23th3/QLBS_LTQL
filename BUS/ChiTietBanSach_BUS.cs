@@ -22,5 +22,9 @@ namespace BUS
         {
             return ChiTietBanSach_DAO.SuaSoLuong(madonhang, soluongMoi, giaban, masach);
         }
+        public static List<ChiTietBanSach_DTO> ThongKeSachBanChay()
+        {
+            return ChiTietBanSach_DAO.ThongKeSachBanChay();
+        }
     }
 }

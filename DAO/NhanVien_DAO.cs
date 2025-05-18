@@ -48,35 +48,29 @@ namespace DAO
                 DataProvider.DongKetNoi(conn);
             }
         }
-        public static List<NhanVien_DTO>TimTheoMaNV(int manv)
+        public static NhanVien_DTO TimTheoMaNV(int manv)
         {
             try
             {
                 string sql = @"select * from nhanvien where manv=@manv";
                 conn = DataProvider.MoKetNoi();
-                SqlCommand cmd=new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@manv",manv);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@manv", manv);
 
                 DataTable dt = DataProvider.TruyVanLayDLCoCmd(cmd);
-                if (dt.Rows.Count == 0) 
+                if (dt.Rows.Count == 0)
                 {
                     return null;
                 }
-                List<NhanVien_DTO> lst = new List<NhanVien_DTO>();
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
                     NhanVien_DTO nv = new NhanVien_DTO();
-                    nv.IMaNV = int.Parse(dt.Rows[i]["manv"].ToString());
-                    nv.STenNV = dt.Rows[i]["tennv"].ToString();
-                    nv.DtNgaySinh = DateTime.Parse(dt.Rows[i]["ngaysinh"].ToString());
-                    nv.SGioiTinh = dt.Rows[i]["gioitinh"].ToString();
-                    nv.SDiaChi = dt.Rows[i]["diachi"].ToString();
-                    nv.SSDT = dt.Rows[i]["sodienthoai"].ToString();
-                    nv.SEmail = dt.Rows[i]["email"].ToString();
-
-                    lst.Add(nv);
-                }
-                return lst;
+                    nv.IMaNV = int.Parse(dt.Rows[0]["manv"].ToString());
+                    nv.STenNV = dt.Rows[0]["tennv"].ToString();
+                    nv.DtNgaySinh = DateTime.Parse(dt.Rows[0]["ngaysinh"].ToString());
+                    nv.SGioiTinh = dt.Rows[0]["gioitinh"].ToString();
+                    nv.SDiaChi = dt.Rows[0]["diachi"].ToString();
+                    nv.SSDT = dt.Rows[0]["sodienthoai"].ToString();
+                    nv.SEmail = dt.Rows[0]["email"].ToString();
+                    return nv;
             }
             catch (Exception ex)
             {

@@ -87,12 +87,13 @@ namespace GUI
             HienThiQlDonHangLenDatagridview();
             HienThiKHLenCombobox();
             HienThiNVLenCombobox();
+            PhanQuyen();
         }
 
         private void dgDSDonHang_Click(object sender, EventArgs e)
         {
             HienThiChiTietDHLenDatagridview();
-            PhanQuyen();
+            
         }
       
         private void btnLocNgay_Click(object sender, EventArgs e)

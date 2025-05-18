@@ -92,3 +92,5 @@ D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\GUI\bin\Debug\ru\Microsoft.ReportViewer
 D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\GUI\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\GUI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\GUI\obj\Debug\GUI.frm_BCDoanhThuTheoNgay.resources
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\GUI\obj\Debug\GUI.frm_bcSachBanChay.resources
+D:\24-25\LTQL1\đồ án_ ltql\qlBanSach\GUI\obj\Debug\GUI.frm_bcHoaDon.resources

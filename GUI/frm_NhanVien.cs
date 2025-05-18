@@ -80,13 +80,14 @@ namespace GUI
                 return;
             }
             int manv=int.Parse(txtNhapTimNV.Text);
-            List<NhanVien_DTO> lst = NhanVien_BUS.TimNVTheoMa(manv);
-            if (lst == null)
+            //List<NhanVien_DTO> lst = NhanVien_BUS.TimNVTheoMa(manv);
+            NhanVien_DTO nv=NhanVien_BUS.TimTheoMaNV(manv);
+            if (nv == null)
             {
                 MessageBox.Show("Không tìm thấy","Thông báo");
                 return;
             }
-            dgDSNhanVien.DataSource = lst;
+            dgDSNhanVien.DataSource = new List<NhanVien_DTO> { nv }; ;
         }
 
         private void btnTimTenNV_Click(object sender, EventArgs e)

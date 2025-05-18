@@ -147,7 +147,7 @@ namespace DAO
                 {
                     return null;
                 }
-                DataRow dr = dt.Rows[0]; //một hàng dữ liệu thô từ DataTable
+                DataRow dr = dt.Rows[0]; //một hàng dữ liệu từ DataTable
                 Books_DTO b = new Books_DTO();
                     b.SMaSach = dr["masach"].ToString();
                     b.STenSach = dr["tensach"].ToString();
@@ -258,6 +258,7 @@ namespace DAO
                 DataProvider.DongKetNoi(conn);
             }
         }
+        //Kiểm tra số lượng tồn kho trước khi thêm vào chi tiết hóa đơn
         public int LaySoLuong(string masach)
         {
             try
@@ -284,19 +285,20 @@ namespace DAO
             {
                 DataProvider.DongKetNoi(conn);
             }
-            
+
         }
-        public bool XoaSach(Books_DTO sach)
+        public bool XoaSach(string masach)
         {
-            try { 
-            string sql = @"update books set daxoa=1 where masach=@masach";
-            conn=DataProvider.MoKetNoi();
+            try
+            {
+                string sql = @"update books set daxoa=1 where masach=@masach";
+                conn = DataProvider.MoKetNoi();
 
-            SqlCommand cmd= new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@masach",sach.SMaSach);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@masach", masach);
 
-            int kq= cmd.ExecuteNonQuery();
-            return kq > 0;
+                int kq = cmd.ExecuteNonQuery();
+                return kq > 0;
             }
             catch (Exception ex)
             {

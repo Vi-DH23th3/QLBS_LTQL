@@ -83,7 +83,7 @@ namespace GUI
                 Width = 150
             });
 
-            // Thành tiền (có thể tính tự động hoặc gán trước)
+            // Thành tiền 
             dgChiTietHD.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Thành tiền",
@@ -110,7 +110,7 @@ namespace GUI
             HienThiKHLenCombobox();
             this.Show();
         }
-
+        //Khi thay đổi tên sách thì sẽ hiện giá tiền tương ứng
         private void cmbTenSach_SelectedIndexChanged(object sender, EventArgs e)
         {
             Books_DTO b= cmbTenSach.SelectedItem as Books_DTO;
@@ -277,12 +277,6 @@ namespace GUI
                 }
             }    
         }
-
-        //private void button5_Click(object sender, EventArgs e)
-        //{
-           
-        //}
-
         private void btnLuuHD_Click(object sender, EventArgs e)
         {
 
@@ -307,7 +301,9 @@ namespace GUI
                     Books_BUS.CapNhatTonKho(masach,soluong);
                 }
 
-                MessageBox.Show("Hoàn tất thao tác!");
+                MessageBox.Show("Hóa đơn đã lưu thành công. Chuẩn bị xuất...");
+                frm_bcHoaDon frm = new frm_bcHoaDon(madonhang, makh, manv);  
+                frm.ShowDialog();
                 this.ResetText();
                 dgChiTietHD.Rows.Clear();
 
@@ -319,10 +315,5 @@ namespace GUI
                 MessageBox.Show("Lỗi lưu hóa đơn: " + ex.Message);
             }
         }
-
-        //private void frm_HoaDon_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-            
-        //}
     }
 }

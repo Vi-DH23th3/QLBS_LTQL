@@ -29,6 +29,7 @@ namespace GUI
             toolStripMenuItemQLBS.Visible = false;
             toolStripMenuItemHoaDon.Visible = false;
             toolStripMenuItemThongKe.Visible = false;
+            toolStripMenuItem2.Visible = false;
             đăngXuấtToolStripMenuItem.Visible = false;
             btnBanSach.Visible = false;
             btnSach.Visible = false;
@@ -58,6 +59,7 @@ namespace GUI
                         toolStripMenuItemQLBS.Visible = true;
                         toolStripMenuItemHoaDon.Visible = true;
                         toolStripMenuItemThongKe.Visible = true;
+                        toolStripMenuItem2.Visible = true;
                         đăngXuấtToolStripMenuItem.Visible = true;
                         btnBanSach.Visible = true;
                         btnSach.Visible = true;
@@ -71,6 +73,8 @@ namespace GUI
                         toolStripMenuItemSach.Visible = true;
                         toolStripMenuItemQLBS.Visible = true;
                         toolStripMenuItemHoaDon.Visible = true;
+                        toolStripMenuItemThongKe.Visible = true;
+                        toolStripMenuItem2.Visible = true;
                         đăngXuấtToolStripMenuItem.Visible = true;
                         btnBanSach.Visible = true;
                         btnSach.Visible = true;
@@ -217,6 +221,12 @@ namespace GUI
         {
             frm_BCDoanhThuTheoNgay frm_bc = new frm_BCDoanhThuTheoNgay();
             frm_bc.ShowDialog();
+        }
+
+        private void ToolStripMenuItemSBC_Click(object sender, EventArgs e)
+        {
+            frm_bcSachBanChay frm=new frm_bcSachBanChay();
+            frm.ShowDialog();
         }
     }
 }

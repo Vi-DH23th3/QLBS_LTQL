@@ -263,7 +263,7 @@
             this.btnLuuHD.Name = "btnLuuHD";
             this.btnLuuHD.Size = new System.Drawing.Size(136, 37);
             this.btnLuuHD.TabIndex = 13;
-            this.btnLuuHD.Text = "Hoàn tất";
+            this.btnLuuHD.Text = "Xuất hóa đơn";
             this.btnLuuHD.UseVisualStyleBackColor = false;
             this.btnLuuHD.Click += new System.EventHandler(this.btnLuuHD_Click);
             // 

@@ -13,7 +13,7 @@ namespace BUS
         {
             return NhanVien_DAO.LayDSNhanVien();
         }
-        public static List<NhanVien_DTO> TimNVTheoMa(int manv)
+        public static NhanVien_DTO TimTheoMaNV(int manv)
         {
             return NhanVien_DAO.TimTheoMaNV(manv);
         }

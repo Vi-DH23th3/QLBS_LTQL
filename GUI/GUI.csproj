@@ -70,6 +70,18 @@
     <Compile Include="frm_BCDoanhThuTheoNgay.Designer.cs">
       <DependentUpon>frm_BCDoanhThuTheoNgay.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_bcHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_bcHoaDon.Designer.cs">
+      <DependentUpon>frm_bcHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_bcSachBanChay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_bcSachBanChay.Designer.cs">
+      <DependentUpon>frm_bcSachBanChay.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,30 +131,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="qlBanSachDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>qlBanSachDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="frm_SuaDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_SuaDonHang.Designer.cs">
       <DependentUpon>frm_SuaDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanlybansachDataSet.Designer.cs">
+    <Compile Include="QuanlybansachDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanlybansachDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QuanlybansachDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanlybansachDataSet1.xsd</DependentUpon>
+      <DependentUpon>QuanlybansachDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frm_BCDoanhThuTheoNgay.resx">
       <DependentUpon>frm_BCDoanhThuTheoNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_bcHoaDon.resx">
+      <DependentUpon>frm_bcHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_bcSachBanChay.resx">
+      <DependentUpon>frm_bcSachBanChay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_HoaDon.resx">
       <DependentUpon>frm_HoaDon.cs</DependentUpon>
@@ -173,9 +181,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="ReportDTNgay.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.ChiTietBanSach_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.KhachHang_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.NguoiDung_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.NhanVien_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.NXB_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.QlBanHang_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.TacGia_DTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -185,38 +201,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="qlBanSachDataSet.xsc">
-      <DependentUpon>qlBanSachDataSet.xsd</DependentUpon>
+    <None Include="QuanlybansachDataSet2.xsc">
+      <DependentUpon>QuanlybansachDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="qlBanSachDataSet.xsd">
+    <None Include="QuanlybansachDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>qlBanSachDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>QuanlybansachDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="qlBanSachDataSet.xss">
-      <DependentUpon>qlBanSachDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanlybansachDataSet.xsc">
-      <DependentUpon>QuanlybansachDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanlybansachDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanlybansachDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanlybansachDataSet.xss">
-      <DependentUpon>QuanlybansachDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanlybansachDataSet1.xsc">
-      <DependentUpon>QuanlybansachDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QuanlybansachDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanlybansachDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanlybansachDataSet1.xss">
-      <DependentUpon>QuanlybansachDataSet1.xsd</DependentUpon>
+    <None Include="QuanlybansachDataSet2.xss">
+      <DependentUpon>QuanlybansachDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

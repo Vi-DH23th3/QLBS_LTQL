@@ -110,35 +110,9 @@ namespace BUS
                 throw new Exception("BUS - Sửa sách: " + ex.Message);
             }
         }
-        public bool XoaSach(Books_DTO sach, out string thongBao) 
+        public bool XoaSach(string ms)
         {
-            try
-            {
-                int soluong=books_DAO.LaySoLuong(sach.SMaSach);
-                if (soluong > 0)
-                {
-                    thongBao = "Sách vẫn còn tồn kho. Không thể xóa!";
-                    return false;
-                }
-                else 
-                {
-                    if (books_DAO.XoaSach(sach))
-                    {
-                        thongBao = "Xóa sách thành công.";
-                        return true;
-                    }
-                    else
-                    {
-                        thongBao = "Xóa sách thất bại.";
-                        return false;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("BUS - Xóa sách: " + ex.Message);
-                
-            }           
+            return books_DAO.XoaSach(ms);
         }
         public static bool CapNhatTonKho(int ms, int soluong)
         {

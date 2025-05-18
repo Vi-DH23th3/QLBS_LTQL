@@ -198,7 +198,7 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message + "\n" + ex.StackTrace);
+                MessageBox.Show("Lỗi: " + ex);
             }
 
 
@@ -210,7 +210,7 @@ namespace GUI
                 string.IsNullOrEmpty(txtTacGia.Text) && 
                 string.IsNullOrEmpty(txtTheLoai.Text) && 
                 string.IsNullOrEmpty(txtSoLuong.Text) && 
-                (cmbNXB.SelectedItem == null))  // Kiểm tra ComboBox
+                (cmbNXB.SelectedItem == null)) 
             {               
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
                 return false;
@@ -264,22 +264,24 @@ namespace GUI
             try
             {
                 string masach = dgDSBook.CurrentRow.Cells["SMasach"].Value.ToString();
-                string thongBao;
-                Books_DTO sach= new Books_DTO();
-                sach.SMaSach = masach;
-                sach.SSachTK = int.Parse(txtSoLuong.Text);               
+                int soluong = int.Parse(dgDSBook.CurrentRow.Cells["SSachTK"].Value.ToString());
+                if(soluong>0)
+                {
+                    MessageBox.Show("Sách vẫn còn tồn kho. Không thể xóa!","Thông báo");
+                    return;
+                }                
                 DialogResult traloi;
                 traloi = MessageBox.Show("Bạn chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (traloi == DialogResult.Yes)
                 {
-                    if (books_BUS.XoaSach(sach, out thongBao))
+                    if (books_BUS.XoaSach(masach))
                     {
-                        MessageBox.Show(thongBao, "Thông báo");
+                        MessageBox.Show("Xóa sách thành công.");
                         HienThiBookLenDataGrid(); 
                     }
                     else
                     {
-                        MessageBox.Show(thongBao, "Lỗi");
+                        MessageBox.Show("Xóa sách thất bại.","Lỗi");
                     }
                 }
                 else

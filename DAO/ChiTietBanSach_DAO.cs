@@ -77,7 +77,7 @@ namespace DAO
                 DataProvider.DongKetNoi(conn);
             }
         }
-        //sửa số lượng và cập nhật lại tổng tiền
+        //sửa số lượng và cập nhật lại tổng tiền, form sửa đơn hàng
         public static bool SuaSoLuong(int madonhang, int soluongMoi, decimal giaban, int masach)
         {
             conn = DataProvider.MoKetNoi();
@@ -93,8 +93,8 @@ namespace DAO
                 cmdUpdate.Parameters.AddWithValue("@madonhang", madonhang);
                 cmdUpdate.Parameters.AddWithValue("@masach", masach);
 
-                int rowsAffected = cmdUpdate.ExecuteNonQuery();
-                if (rowsAffected == 0)
+                int kq = cmdUpdate.ExecuteNonQuery();
+                if (kq == 0)
                 {
                     throw new Exception("Không có bản ghi nào bị ảnh hưởng.");
                 }
@@ -122,13 +122,47 @@ namespace DAO
             catch (Exception ex)
             {
                 transaction?.Rollback();
-                throw new Exception("Lỗi:" + ex.Message);
+                throw new Exception("DAO - sửa số lượng:" + ex.Message);
             }
             finally
             {
                 DataProvider.DongKetNoi(conn);
             }
         }
-       
+       public static List<ChiTietBanSach_DTO> ThongKeSachBanChay()
+        {
+            try
+            {
+                string sql = @"select TOP 5 ctbs.masach, b.tensach, sum(ctbs.soluong) as SoLuongBan
+                               from chitiet_bansach ctbs
+                               join books b on b.masach=ctbs.masach
+                               group by ctbs.masach, b.tensach
+                               order by SoLuongBan DESC";
+                conn = DataProvider.MoKetNoi();
+                DataTable dt = DataProvider.TruyVanLayDuLieu(sql, conn);
+                if (dt.Rows.Count == 0)
+                {
+                    return null;
+                }
+                List<ChiTietBanSach_DTO> lst = new List<ChiTietBanSach_DTO>();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ChiTietBanSach_DTO ct = new ChiTietBanSach_DTO();
+                    ct.IMaSach = int.Parse(dt.Rows[i]["masach"].ToString());
+                    ct.STenSach = dt.Rows[i]["tensach"].ToString();
+                    ct.ISoLuong = int.Parse(dt.Rows[i]["SoLuongBan"].ToString());
+                    lst.Add(ct);
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("DAO - Lỗi thống kê sách bán chạy:" + ex.Message);
+            }
+            finally
+            {
+                DataProvider.DongKetNoi(conn);
+            }
+        }
     }
 }

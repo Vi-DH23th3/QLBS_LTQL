@@ -34,15 +34,6 @@ namespace DAO
             return lstTacGia;
         }
 
-        //public bool ThemTacGia(TacGia_DTO tacgia)
-        //{
-        //    string sQuery = string.Format(@" insert into tacgia value(N'{0}', N'{1}')",tacgia.SMaTG, tacgia.STenTacGia);
-        //    conn = DataProvider.MoKetNoi();
-
-        //    bool kq= DataProvider.TruyVanKhongLayDuLieu(sQuery,conn);
-        //    DataProvider.DongKetNoi(conn);
-        //    return kq;
-        //}
         public bool ThemTacGia(TacGia_DTO tacgia)
         {
             try
